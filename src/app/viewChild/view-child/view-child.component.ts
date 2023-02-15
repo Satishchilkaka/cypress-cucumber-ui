@@ -10,12 +10,12 @@ export class ViewChildComponent implements OnInit {
   constructor() { }
 
   searchValues = [{ searchValue: '' }]
-  @ViewChild('searchInput')
-  searchInputValue!: ElementRef;
+  @ViewChild('itemName')
+  itemNameValue!: ElementRef;
 
-  getSearchData(searchInput: any) {
+  getSearchData(itemName: any) {
     this.searchValues.push({
-      searchValue: this.searchInputValue.nativeElement.value
+      searchValue: this.itemNameValue.nativeElement.value
     })
 
   }

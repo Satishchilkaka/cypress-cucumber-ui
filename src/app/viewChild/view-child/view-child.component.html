@@ -3,12 +3,13 @@
     <div class="col-xs-12">
       <input
         type="text"
-        class="search-input search"
-        #searchInput
-        placeholder="search"
+        class="item-name"
+        #itemName
+        placeholder="Add name, city, state"
+        data-cy="itemName"
       />
       &nbsp;
-      <button class="btn btn-primary" (click)="getSearchData(searchInput)">
+      <button class="btn btn-primary" (click)="getSearchData(itemName)">
         Get search name
       </button>
       <p *ngFor="let i of searchValues">
