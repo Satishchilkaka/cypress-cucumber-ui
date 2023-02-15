@@ -1,7 +1,6 @@
 # cypress-cucumber-ui
  
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
+Cypress integrate with cucumber framework
 
 ## Development server
 
