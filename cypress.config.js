@@ -6,7 +6,6 @@ const createEsBuildPlugin = require('@badeball/cypress-cucumber-preprocessor/esb
 module.exports = defineConfig({
   e2e: {
     async setupNodeEvents(on, config) {
-      // implement node event listeners here
       const bundler = createBundler({
         plugins: [createEsBuildPlugin(config)],
         });
@@ -14,7 +13,7 @@ module.exports = defineConfig({
         await addCucumberPreprocessorPlugin(on, config);
         return config;
         },
-        baseUrl: "https://www.google.com",
+        baseUrl: "http://localhost:4200/",
         chromeWebSecurity: false,
 
     specPattern: "cypress/e2e/features/*.feature"
