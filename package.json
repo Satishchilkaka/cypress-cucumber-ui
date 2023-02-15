@@ -39,6 +39,7 @@
     "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
     "@cypress/schematic": "^2.5.0",
     "@types/jasmine": "~4.3.0",
+    "bootstrap": "^5.2.3",
     "cypress": "^12.5.1",
     "esbuild": "^0.16.4",
     "jasmine-core": "~4.5.0",
