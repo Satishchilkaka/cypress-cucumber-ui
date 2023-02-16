@@ -1,0 +1,25 @@
+name: Cypress E2E test
+on:
+  pull_request:
+jobs:
+  start-server:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get dir
+        run: |
+          pwd
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install
+        run: npm install
+
+      - name: Run E2E tests with Cypress
+        if: always()
+        uses: cypress-io/github-action@v5.0.8
+        with:
+          command: npm run cypress:ci
+   
