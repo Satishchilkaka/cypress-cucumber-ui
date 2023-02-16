@@ -15,7 +15,8 @@ module.exports = defineConfig({
         },
         baseUrl: "http://localhost:4200/",
         chromeWebSecurity: false,
-
+        video: false,
+        screenshotOnRunFailure: false,
     specPattern: "cypress/e2e/features/*.feature"
   },
 });
