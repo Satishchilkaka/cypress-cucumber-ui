@@ -33,6 +33,7 @@ Then('Should have input field', () => {
 })
 Then('Should have Add items button', () => {
   cy.get('[data-cy="addItem"]').should('exist').and('be.visible');
+  localStorage.debug = 'cypress:*'
 })
 
 
