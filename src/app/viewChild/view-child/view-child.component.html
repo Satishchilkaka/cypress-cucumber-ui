@@ -9,8 +9,8 @@
         data-cy="itemName"
       />
       &nbsp;
-      <button class="btn btn-primary" (click)="getSearchData(itemName)">
-        Get search name
+      <button class="btn btn-primary" data-cy="addItem" (click)="getSearchData(itemName)">
+        Add new item
       </button>
       <p *ngFor="let i of searchValues">
         {{ i.searchValue }}
