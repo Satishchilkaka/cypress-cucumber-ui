@@ -35,6 +35,6 @@ npm run cypress:ci
 ```
 ### Run cypress e2e with Cucumber integration
 ```
-start local server: `npm start`
-Open cypress: `npm run cypress:open`
+start local server: npm start
+Open cypress: npm run cypress:open
 
