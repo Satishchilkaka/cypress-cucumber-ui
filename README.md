@@ -31,3 +31,10 @@ npm run cy-run
 Open new terminal:
 npm install
 npm run cypress:ci
+
+```
+### Run cypress e2e with Cucumber integration
+```
+start local server: `npm start`
+Open cypress: `npm run cypress:open`
+
