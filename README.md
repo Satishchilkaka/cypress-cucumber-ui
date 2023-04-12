@@ -31,6 +31,3 @@ npm run cy-run
 Open new terminal:
 npm install
 npm run cypress:ci
-
-
-
