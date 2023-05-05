@@ -1,0 +1,50 @@
+{
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx-cloud",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "test"
+        ],
+        "accessToken": "YTVlMmU2ZGQtODllOC00ZmEyLWFjYjEtZjg3OGIwODg0M2E2fHJlYWQtd3JpdGU="
+      }
+    }
+  },
+  "defaultBase": "main",
+  "namedInputs": {
+    "sharedGlobals": [],
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
+    "production": [
+      "default",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/**/*.spec.[jt]s"
+    ]
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "production",
+        "^production"
+      ]
+    },
+    "test": {
+      "inputs": [
+        "default",
+        "^production"
+      ]
+    },
+    "e2e": {
+      "inputs": [
+        "default",
+        "^production"
+      ]
+    }
+  }
+}

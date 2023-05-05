@@ -1,0 +1,141 @@
+{
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "name": "cypress-cucumber-ui",
+  "projectType": "application",
+  "generators": {},
+  "sourceRoot": "src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/cypress-cucumber-ui",
+        "index": "src/index.html",
+        "main": "src/main.ts",
+        "polyfills": [
+          "zone.js"
+        ],
+        "tsConfig": "tsconfig.app.json",
+        "assets": [
+          "src/favicon.ico",
+          "src/assets"
+        ],
+        "styles": [
+          "node_modules/bootstrap/dist/css/bootstrap.min.css",
+          "src/styles.css"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production",
+      "outputs": [
+        "{options.outputPath}"
+      ]
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "cypress-cucumber-ui:build:production"
+        },
+        "development": {
+          "browserTarget": "cypress-cucumber-ui:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "cypress-cucumber-ui:build"
+      }
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "polyfills": [
+          "zone.js",
+          "zone.js/testing"
+        ],
+        "tsConfig": "tsconfig.spec.json",
+        "assets": [
+          "src/favicon.ico",
+          "src/assets"
+        ],
+        "styles": [
+          "src/styles.css"
+        ],
+        "scripts": []
+      }
+    },
+    "cypress-run": {
+      "executor": "@cypress/schematic:cypress",
+      "options": {
+        "devServerTarget": "cypress-cucumber-ui:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "cypress-cucumber-ui:serve:production"
+        }
+      }
+    },
+    "cypress-open": {
+      "executor": "@cypress/schematic:cypress",
+      "options": {
+        "watch": true,
+        "headless": false
+      }
+    },
+    "ct": {
+      "executor": "@cypress/schematic:cypress",
+      "options": {
+        "devServerTarget": "cypress-cucumber-ui:serve",
+        "watch": true,
+        "headless": false,
+        "testingType": "component"
+      },
+      "configurations": {
+        "development": {
+          "devServerTarget": "cypress-cucumber-ui:serve:development"
+        }
+      }
+    },
+    "e2e": {
+      "executor": "@cypress/schematic:cypress",
+      "options": {
+        "devServerTarget": "cypress-cucumber-ui:serve",
+        "watch": true,
+        "headless": false
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "cypress-cucumber-ui:serve:production"
+        }
+      }
+    }
+  }
+}
