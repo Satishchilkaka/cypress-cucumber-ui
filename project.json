@@ -106,7 +106,7 @@
     "cypress-open": {
       "executor": "@cypress/schematic:cypress",
       "options": {
-        "watch": true,
+        "watch": false,
         "headless": false
       }
     },
@@ -114,7 +114,7 @@
       "executor": "@cypress/schematic:cypress",
       "options": {
         "devServerTarget": "cypress-cucumber-ui:serve",
-        "watch": true,
+        "watch": false,
         "headless": false,
         "testingType": "component"
       },
@@ -128,7 +128,7 @@
       "executor": "@cypress/schematic:cypress",
       "options": {
         "devServerTarget": "cypress-cucumber-ui:serve",
-        "watch": true,
+        "watch": false,
         "headless": false
       },
       "configurations": {

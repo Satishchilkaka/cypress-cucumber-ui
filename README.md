@@ -17,13 +17,13 @@ Run `nx test cypress-cucumber-ui` to execute the unit tests via [Karma](https://
 
 ## Running end-to-end tests
 
-Run `nx e2e cypress-cucumber-ui` to execute the end-to-end tests via Cypress
+Run `nx e2e` to execute the end-to-end tests via Cypress
 
 ### Run cypress e2e test without UI
 ```
 Open new terminal:
 npm install
-npm run cy-run
+
 ```
 
 ### Run cypress e2e test with UI
