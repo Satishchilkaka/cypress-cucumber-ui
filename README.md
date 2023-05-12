@@ -23,14 +23,14 @@ Run `nx e2e` to execute the end-to-end tests via Cypress
 ```
 Open new terminal:
 npm install
-
+nx e2e
 ```
 
 ### Run cypress e2e test with UI
 ```
 Open new terminal:
 npm install
-npm run cypress:ci
+nx e2e --watch
 
 ```
 ### Run cypress e2e with Cucumber integration
