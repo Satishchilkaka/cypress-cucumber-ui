@@ -35,6 +35,6 @@ nx e2e --watch
 ```
 ### Run cypress e2e with Cucumber integration
 ```
-start local server: npm start
-Open cypress: npm run cypress:open
+nx e2e --watch
+
 
