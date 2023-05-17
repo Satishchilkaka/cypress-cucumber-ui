@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "nx serve cypress-cucumber-ui",
-    "build": "nnx build cypress-cucumber-ui",
+    "build": "npx build cypress-cucumber-ui",
     "watch": "nx build cypress-cucumber-ui --watch --configuration development",
     "test": "nx cypress open",
     "e2e": "nx e2e",

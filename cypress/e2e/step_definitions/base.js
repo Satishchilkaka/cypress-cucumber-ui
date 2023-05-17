@@ -9,7 +9,7 @@ const homePage = require('../../pages/basePage.js')
 Given("Local host 4200", () => {
   cy.visit("/");
 });
-When("A user naviagte to local host 4200", () => {
+When("A user Navigate to local host 4200", () => {
   // cy.visit("/");
   
 });
